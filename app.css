@@ -1,0 +1,270 @@
+:root {
+  --clr-member-1: #c1b6f8;
+  --clr-member-2: #edacd2;
+  --clr-member-3: #9dc4f8;
+  --clr-member-4: #f8d8b0;
+  --clr-member-5: #86e7d4;
+  --clr-link: #263fa9;
+  --clr-white: #fffefe;
+  --clr-black: #000000;
+  --clr-dark: #394150;
+  --clr-grey: #f3f4f6;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--clr-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+span > a {
+  text-decoration: none;
+  color: var(--clr-dark);
+  font-weight: 600;
+}
+
+.members-link-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.members-link {
+  line-height: 1;
+}
+
+.arrow-icon {
+  vertical-align: text-bottom;
+}
+
+.outfit-heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.outfit-label {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 1135px;
+  height: 575px;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: var(--clr-grey);
+  margin: auto;
+}
+
+.cta {
+  grid-column: 1 / span 2;
+  padding: 2rem;
+  padding-right: 3.5rem;
+  position: relative;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: auto;
+  z-index: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--clr-link);
+  font-weight: 500;
+}
+
+.cta-heading {
+  position: relative;
+  margin-top: 0.5rem;
+  z-index: 1;
+}
+
+.cta-text {
+  position: relative;
+  margin-top: 0.75rem;
+  z-index: 1;
+}
+
+.card {
+  color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem 1.5rem;
+  position: relative;
+}
+
+.card-heading {
+  font-size: clamp(1.25rem, 1.25rem + 0.6vw, 1.5rem);
+}
+
+.card-text {
+  font-size: clamp(0.87rem, 0.78rem + 0.6vw, 0.96rem);
+}
+
+.member-info {
+  position: inherit;
+  z-index: 2;
+}
+
+.member-img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.gradient-img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.member-1 {
+  background-color: var(--clr-member-1);
+}
+
+.member-2 {
+  background-color: var(--clr-member-2);
+}
+
+.member-3 {
+  background-color: var(--clr-member-3);
+}
+
+.member-4 {
+  background-color: var(--clr-member-4);
+}
+
+.member-5 {
+  background-color: var(--clr-member-5);
+}
+
+.author-info {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+  color: rgb(55, 65, 81);
+}
+
+.author-info a {
+  text-decoration: none;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    padding: 5rem 3rem;
+    display: block;
+  }
+  .container {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: auto;
+  }
+  .cta {
+    grid-column: 1 / span 3;
+    padding-right: 40%;
+    margin-bottom: 4rem;
+  }
+
+  .outfit-label {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  .member-img {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .member-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  .card {
+    padding: 0;
+  }
+  .bg-image {
+    width: 25%;
+    height: auto;
+  }
+  .members-link-container {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .member-3 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+    height: auto;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+  .cta {
+    grid-column: 1;
+    padding: 2rem;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .bg-image {
+    width: 55%;
+    height: auto;
+  }
+  .card {
+    padding: 0;
+  }
+  .member-img {
+    position: relative;
+  }
+  .member-info {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+  }
+  .members-link-container {
+    min-height: 300px;
+    grid-row: 7;
+  }
+}
