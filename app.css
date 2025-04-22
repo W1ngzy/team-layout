@@ -21,11 +21,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: var(--clr-black);
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; */
 }
 
 .outfit-heading {
@@ -45,6 +40,14 @@ span > a {
   text-decoration: none;
   color: var(--clr-dark);
   font-weight: 600;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
 }
 
 .container {
@@ -180,6 +183,8 @@ span > a {
 
 .author-info a {
   text-decoration: none;
+  color: var(--clr-dark);
+  font-weight: 600;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -236,6 +241,12 @@ span > a {
     height: auto;
     overflow-y: auto;
     padding: 1rem;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
   }
   .container {
     width: 100%;
